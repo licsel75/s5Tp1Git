@@ -18,7 +18,7 @@ function Layout() {
           </nav>
         </div>
       </header>
-      
+
       <main className="max-w-6xl mx-auto px-4 pb-20">
         {/* 'Outlet' es donde React Router inyecta las páginas hijas */}
         <Outlet />

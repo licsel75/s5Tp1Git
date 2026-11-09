@@ -1,17 +1,16 @@
 import { Routes, Route } from 'react-router-dom';
 import Layout from './components/Layout';
 import LibroList from './pages/LibroList';
+import LibroCreate from './pages/LibroCreate'; //  importo LibroCreate
 
 function App() {
   return (
     <Routes>
-      {/* Layout envuelve a todas las rutas hijas */}
       <Route path="/" element={<Layout />}>
-        {/* Ruta principal (Lista) */}
         <Route index element={<LibroList />} />
-        
-        {/* Estas rutas las crearemos en los siguientes pasos */}
-        <Route path="*" element={<p className="mt-10 text-center text-xl">Página en construcción...</p>} />
+        {/*  agrego LibroCreate*/}
+        <Route path="crear" element={<LibroCreate />} /> 
+        <Route path="*" element={<p className="text-center mt-10 text-xl">Página no encontrada</p>} />
       </Route>
     </Routes>
   );
