@@ -32,3 +32,5 @@ Uso de IA
 Qué generé con IA: Usé IA para entender cómo estructurar la capa de servicios con Axios, para repasar cómo funciona useParams de React Router, y para resolver un conflicto de dependencias que rompía los hooks de React al principio.
 
 Qué corregí a mano: Toda la lógica de los formularios, el manejo de los IDs que a veces no devuelve MockAPI, los estados de carga y error, y los estilos de Tailwind.
+
+**Demo en vivo:** [https://libreria-crud.netlify.app/]
