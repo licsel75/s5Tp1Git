@@ -1,0 +1,4 @@
+[build]
+  base = "libreria-crud"
+  command = "pnpm run build"
+  publish = "dist"
