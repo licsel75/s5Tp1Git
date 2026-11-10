@@ -30,9 +30,9 @@ function LibroList() {
       try {
         await deleteLibro(idParaBorrar);
         alert("Libro eliminado correctamente 🗑️");
-        // ACÁ ESTABA EL ERROR: usamos idParaBorrar en lugar de id
+     
         setLibros((prev) => prev.filter((libro, index) => {
-          const currentId = libro.id || (index + 1);
+          const currentId = libro.id ;
           return currentId !== idParaBorrar;
         }));
       } catch (err) {
@@ -52,12 +52,14 @@ function LibroList() {
           const titulo = libro.nombre || libro.titulo || libro.title || "Sin título";
 
           // Si el JSON trae ID, usamos ese. Si no, asumimos que es el índice (0 es ID 1, 1 es ID 2)
-          const idParaBorrar = libro.id || (index + 1);
+          //    const idParaBorrar = libro.id || (index + 1);
+          const idParaBorrar = libro.id ;
 
           return (
             <div key={idParaBorrar} className="bg-white p-5 rounded-xl shadow-md flex flex-col justify-between">
               <div>
-                <p className="text-xs text-gray-400 mb-2">ID: {idParaBorrar}</p>
+                  {/*  <p className="text-xs text-gray-400 mb-2">ID: {idParaBorrar}</p> */}
+               
                 <h3 className="text-xl font-bold text-primary mb-1">{titulo}</h3>
                 <p className="text-gray-600 font-semibold mb-2">{libro.autor || libro.author || "Autor desconocido"}</p>
                 <p className="text-sm text-gray-500 mb-4">{libro.genero || "Género"} | ${libro.precio || 0}</p>
@@ -65,7 +67,7 @@ function LibroList() {
 
               <div className="flex gap-2 mt-4">
                 <Link
-                  to={`/libros/${libro.id || (index + 1)}`}
+                  to={`/libros/${libro.id }`}
                   className="flex-1 bg-secondary text-white text-center py-2 rounded-lg hover:bg-primary transition-colors"
                 >
                   Ver Detalle

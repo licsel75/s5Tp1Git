@@ -68,10 +68,11 @@ function LibroDetail() {
           <p className="text-sm text-gray-500 font-bold uppercase">Precio</p>
           <p className="text-2xl font-bold text-primary">${libro.precio || 0}</p>
         </div>
+              {/* 
         <div>
           <p className="text-sm text-gray-500 font-bold uppercase">ID del sistema</p>
           <p className="text-lg">{libro.id || id}</p>
-        </div>
+        </div>   */}
       </div>
 
       <div className="mb-8">
